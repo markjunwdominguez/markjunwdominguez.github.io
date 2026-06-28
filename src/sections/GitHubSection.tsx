@@ -4,7 +4,7 @@ import { GithubIcon as Github } from '../components/Icons';
 import ScrollReveal from '../components/ScrollReveal';
 
 export default function GitHubSection() {
-  const githubUsername = "markjunw";
+  const githubUsername = "markjunwdominguez";
   
   return (
     <section id="github" className="scroll-mt-24">

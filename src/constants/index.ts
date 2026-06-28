@@ -120,27 +120,7 @@ export const projectsData = [
     liveUrl: '#',
     featured: true,
   },
-  {
-    id: 3,
-    title: 'E-Commerce Platform',
-    subtitle: '',
-    categoryBadge: '',
-    description: 'Full stack e-commerce platform built with Laravel and React.',
-    overview: 'Full stack e-commerce platform built with Laravel and React.',
-    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&q=80&w=1000',
-    technologies: ['React', 'Laravel', 'MySQL', 'Tailwind CSS'],
-    highlights: [
-      'User authentication and authorization',
-      'Real-time data synchronization',
-      'Responsive and accessible UI',
-      'Automated background tasks',
-    ],
-    role: ['Full Stack Developer'],
-    achievements: [],
-    githubUrl: '#',
-    liveUrl: '#',
-    featured: true,
-  },
+
   {
     id: 4,
     title: 'Portfolio Website',
