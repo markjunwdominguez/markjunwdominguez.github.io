@@ -27,7 +27,7 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-          >MarkDomz.Dev&nbsp;</motion.span>
+          >MarkDomzjr.dev&nbsp;</motion.span>
           <motion.span
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
