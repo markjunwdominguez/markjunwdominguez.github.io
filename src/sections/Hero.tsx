@@ -141,7 +141,7 @@ export default function Hero({ onContactOpen }: HeroProps) {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex gap-6"
         >
-          <a href="https://github.com/markjundominguez" target="_blank" rel="noopener noreferrer" className="p-3 bg-card rounded-full border border-borderCmp text-textMuted hover:text-accent hover:border-accent transition-colors">
+          <a href="https://github.com/markjunwdominguez" target="_blank" rel="noopener noreferrer" className="p-3 bg-card rounded-full border border-borderCmp text-textMuted hover:text-accent hover:border-accent transition-colors">
             <Github size={24} />
           </a>
           <button onClick={() => window.open('https://www.facebook.com/mjchoichoi.dominguezjr.1', '_blank', 'noopener,noreferrer')} className="p-3 bg-card rounded-full border border-borderCmp text-textMuted hover:text-accent hover:border-accent transition-colors cursor-pointer">
