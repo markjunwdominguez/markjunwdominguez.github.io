@@ -42,7 +42,7 @@ export default function Contact({ onContactOpen, onTerminalOpen }: ContactProps)
         <div className="mt-16 flex justify-center gap-6">
           {/* GitHub */}
           <motion.a
-            href="https://github.com/markjunwdominguez"
+            href="https://github.com/markjunwdominguez/markjunwdominguez.github.io"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.15, y: -3 }}
