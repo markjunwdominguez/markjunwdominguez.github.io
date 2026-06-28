@@ -32,7 +32,8 @@ export const skillsList = {
   languages: ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'PHP', 'Python'],
   frameworks: ['React', 'Laravel', 'Tailwind CSS', 'Node.js', '.NET 8'],
   tools: ['Git', 'GitHub', 'VS Code', 'Figma', 'MySQL', 'Firebase'],
-  ai: ['ChatGPT', 'Claude', 'Cursor', 'V0', 'Replit', 'GitHub Copilot']
+  ai: ['ChatGPT', 'Claude', 'Cursor', 'V0', 'Replit', 'GitHub Copilot'],
+  automation: ['Make (Integromat)', 'n8n', 'Zapier', 'Power Automate', 'Pipedream', 'IFTTT']
 };
 
 

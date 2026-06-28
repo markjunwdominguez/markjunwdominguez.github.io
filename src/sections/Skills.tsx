@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { skillsList } from '../constants';
-import { Code2, Layers, Wrench, Sparkles } from 'lucide-react';
+import { Code2, Layers, Wrench, Sparkles, Zap } from 'lucide-react';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,7 +37,7 @@ export default function Skills() {
         </div>
       </motion.div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
         {/* Languages */}
         <motion.div 
           variants={containerVariants}
@@ -139,6 +139,33 @@ export default function Skills() {
                 key={skill}
                 variants={itemVariants}
                 className="px-3 py-1.5 bg-background border border-borderCmp rounded-md text-sm font-medium text-textMain shadow-sm hover:border-[#d2a8ff] hover:text-[#d2a8ff] transition-colors"
+              >
+                {skill}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Automation Tools */}
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="glass-panel p-6 flex flex-col"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div className="p-3 bg-[#f7a84a]/10 text-[#f7a84a] rounded-lg">
+              <Zap size={24} />
+            </div>
+            <h3 className="text-xl font-semibold">Automation</h3>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {skillsList.automation.map((skill) => (
+              <motion.span 
+                key={skill}
+                variants={itemVariants}
+                className="px-3 py-1.5 bg-background border border-borderCmp rounded-md text-sm font-medium text-textMain shadow-sm hover:border-[#f7a84a] hover:text-[#f7a84a] transition-colors"
               >
                 {skill}
               </motion.span>
