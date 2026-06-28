@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="w-full py-6 text-center border-t border-border/50 mt-12">
       <p className="text-textMuted font-mono text-sm">
-        <span className="text-accent">&gt;</span> Built by Mark Jun W. Dominguez
+        <span className="text-accent">&gt;</span> Built by Mark Jun W. Dominguez Jr.
       </p>
 
       {/* Social Links */}
