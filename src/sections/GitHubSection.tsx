@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Activity, Code2 } from 'lucide-react';
+import { Code2, GitCommit, GitFork, Star, Users, BookOpen } from 'lucide-react';
 import { GithubIcon as Github } from '../components/Icons';
 import ScrollReveal from '../components/ScrollReveal';
 
@@ -13,9 +13,18 @@ const topLanguages = [
   { name: 'C++',        percent:  3, color: '#f34b7d' },
 ];
 
+const githubStats = [
+  { icon: GitCommit, label: 'Total Commits', value: '50+' },
+  { icon: BookOpen,  label: 'Repositories', value: '5+'  },
+  { icon: Star,      label: 'Stars Earned',  value: '1+'  },
+  { icon: GitFork,   label: 'Forks',         value: '1+'  },
+  { icon: Users,     label: 'Contributions', value: '50+' },
+  { icon: Code2,     label: 'Languages',     value: '7'   },
+];
+
 export default function GitHubSection() {
-  const githubUsername   = 'markjunwdominguez';
-  const githubRepoUrl    = 'https://github.com/markjunwdominguez/markjunwdominguez.github.io';
+  const githubUsername = 'markjunwdominguez';
+  const githubRepoUrl  = 'https://github.com/markjunwdominguez/markjunwdominguez.github.io';
 
   return (
     <section id="github" className="scroll-mt-24">
@@ -37,7 +46,7 @@ export default function GitHubSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
-          {/* ── Top Languages (custom hardcoded) ── */}
+          {/* ── Top Languages (custom bars) ── */}
           <ScrollReveal direction="left" delay={0.1}>
             <motion.div
               whileHover={{ y: -5, boxShadow: '0 0 20px rgba(0,255,136,0.15)' }}
@@ -55,7 +64,7 @@ export default function GitHubSection() {
                 </div>
               </div>
 
-              {/* Language bars */}
+              {/* Animated language bars */}
               <div className="space-y-3">
                 {topLanguages.map((lang, i) => (
                   <motion.div
@@ -89,12 +98,11 @@ export default function GitHubSection() {
                 ))}
               </div>
 
-              {/* Colour legend strip */}
-              <div className="mt-5 flex gap-1 h-2 rounded-full overflow-hidden">
+              {/* Colour strip */}
+              <div className="mt-5 flex h-2 rounded-full overflow-hidden">
                 {topLanguages.map((lang) => (
                   <div
                     key={lang.name}
-                    className="h-full rounded-full"
                     style={{ width: `${lang.percent}%`, backgroundColor: lang.color }}
                     title={`${lang.name} ${lang.percent}%`}
                   />
@@ -103,7 +111,7 @@ export default function GitHubSection() {
             </motion.div>
           </ScrollReveal>
 
-          {/* ── GitHub Stats (API, no link wrapper) ── */}
+          {/* ── GitHub Stats (custom cards) ── */}
           <ScrollReveal direction="right" delay={0.1}>
             <motion.div
               whileHover={{ y: -5, boxShadow: '0 0 20px rgba(0,255,136,0.15)' }}
@@ -113,7 +121,7 @@ export default function GitHubSection() {
 
               <div className="flex items-center gap-4 mb-6">
                 <div className="p-3 bg-accent/10 rounded-lg text-accent">
-                  <Activity className="w-6 h-6" />
+                  <Github className="w-6 h-6" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-textMain">GitHub Stats</h3>
@@ -121,18 +129,27 @@ export default function GitHubSection() {
                 </div>
               </div>
 
-              <div className="w-full flex justify-center bg-background/50 rounded-lg p-4 border border-border/50">
-                <img
-                  src={`https://github-readme-stats.vercel.app/api?username=${githubUsername}&show_icons=true&theme=tokyonight&hide_border=true&bg_color=0d1117&title_color=00ff88&icon_color=00ff88&text_color=a0aec0&include_all_commits=true&count_private=true`}
-                  alt="GitHub Stats"
-                  className="w-full max-w-sm"
-                />
+              <div className="grid grid-cols-2 gap-3">
+                {githubStats.map(({ icon: Icon, label, value }, i) => (
+                  <motion.div
+                    key={label}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.06 }}
+                    className="flex flex-col items-center justify-center gap-1 bg-background/60 border border-border/50 rounded-lg p-4 hover:border-accent/40 transition-colors"
+                  >
+                    <Icon className="w-5 h-5 text-accent mb-1" />
+                    <span className="text-2xl font-bold text-textMain font-mono">{value}</span>
+                    <span className="text-xs text-textMuted text-center">{label}</span>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </ScrollReveal>
         </div>
 
-        {/* ── Contribution Streak (no link) ── */}
+        {/* ── Contribution Streak ── */}
         <ScrollReveal direction="up" delay={0.2}>
           <motion.div
             whileHover={{ y: -5, boxShadow: '0 0 20px rgba(0,255,136,0.15)' }}
