@@ -15,9 +15,11 @@ export default function GitHubSection() {
         transition={{ duration: 0.5 }}
       >
         <div className="flex items-center gap-4 mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-textMain">
-            <span className="text-accent">#</span> GitHub_Activity
-          </h2>
+          <a href="https://github.com/markjunwdominguez/markjunwdominguez.github.io" target="_blank" rel="noopener noreferrer" className="group">
+            <h2 className="text-3xl md:text-4xl font-bold text-textMain group-hover:text-accent transition-colors">
+              <span className="text-accent">#</span> GitHub_Activity
+            </h2>
+          </a>
           <div className="h-[1px] flex-1 bg-border/50"></div>
         </div>
 
