@@ -14,11 +14,11 @@ const topLanguages = [
 ];
 
 const githubStats = [
-  { icon: GitCommit, label: 'Total Commits', value: '50+' },
-  { icon: BookOpen,  label: 'Repositories', value: '5+'  },
-  { icon: Star,      label: 'Stars Earned',  value: '1+'  },
-  { icon: GitFork,   label: 'Forks',         value: '1+'  },
-  { icon: Users,     label: 'Contributions', value: '50+' },
+  { icon: GitCommit, label: 'Total Commits', value: '13'  },
+  { icon: BookOpen,  label: 'Repositories', value: '1'   },
+  { icon: Star,      label: 'Stars Earned',  value: '0'   },
+  { icon: GitFork,   label: 'Forks',         value: '0'   },
+  { icon: Users,     label: 'Contributions', value: '13'  },
   { icon: Code2,     label: 'Languages',     value: '7'   },
 ];
 
